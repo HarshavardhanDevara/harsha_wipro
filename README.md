@@ -1,12 +1,18 @@
 # Harshavardhan Devarakonda(b47user09)
 
-### 1)Linux              - Jan28th  to Jan29th
+### 1)CA&SDLC            -Jan24th  to Jan28th
+##### Day1(Jan24th)
+##### Day2(Jan25th)
+##### Day3(Jan27th)
+##### Day4(Jan28th)
+
+### 2)Linux              - Jan28th  to Jan30th
 
 
-### 2)SQL                - Jan30th to Feb1st
+### 3)SQL                - Jan30th to Feb1st
 
 
-### 3)Python Programming - Feb 3rd... 
+### 4)Python Programming - Feb 3rd... 
 ##### Day1(Feb3rd)
 ##### Day2(Feb4th)
 ##### Day3(Feb5th)
