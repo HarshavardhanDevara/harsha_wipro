@@ -2,7 +2,7 @@
 import sqlite3
 
 # Use 'with' to open and close the connection automatically
-with sqlite3.connect('my_database.db') as connection:
+with sqlite3.connect('rps_database.db') as connection:
 
     cursor = connection.cursor()
 
