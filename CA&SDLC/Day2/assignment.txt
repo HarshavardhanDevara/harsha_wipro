@@ -1,0 +1,39 @@
+1. Differences Between L1, L2, and L3 Caches:
+- L1 Cache: Closest to the CPU cores, it is the smallest (typically 32KB to 128KB) and fastest, with low latency and high bandwidth.
+- L2 Cache: Located between L1 and L3, closer to CPU cores than L3. It is larger (256KB to 1MB) and slower than L1 but faster than L3.
+- L3 Cache: Shared among CPU cores, it is the largest (1MB to several MBs) and slowest compared to L1 and L2, but still faster than main memory.
+
+2. Cache Miss:
+A cache miss occurs when the CPU requests data that is not found in the cache memory, requiring the CPU to fetch the data from a slower memory tier, such as RAM.
+
+Three main types of cache misses:
+- Cold Miss (Compulsory Miss): Occurs when data is accessed for the first time.
+- Capacity Miss: Occurs when the cache cannot contain all the data needed by the program, causing some data to be evicted.
+- Conflict Miss: Occurs when multiple data blocks compete for the same cache line, even if the cache could hold all the data.
+
+3. Data-Level Parallelism (DLP) vs. Task-Level Parallelism (TLP):
+- Data-Level Parallelism (DLP): This involves performing the same operation on multiple data points simultaneously. For example, matrix multiplication on a GPU, where each element is computed in parallel.
+- Task-Level Parallelism (TLP): This involves running different tasks or processes concurrently. For example, a web server handling multiple client requests, where each request is processed on a different core.
+
+4. Comparison of Smartphone Processors:
+Let's compare the Apple iPhone 15 and the Samsung Galaxy S22.
+
+- Processor Architecture: Both smartphones use ARM architecture. The iPhone 15 has the Apple A15 Bionic chip, while the Galaxy S22 uses the Exynos 2200 or Snapdragon 898, depending on the region.
+- Clock Speed: The iPhone 15's processor runs at up to 3.2 GHz, while the Galaxy S22's processor runs at up to 3.0 GHz.
+- Number of Cores: The iPhone 15 has 6 cores (2 performance and 4 efficiency cores), while the Galaxy S22 has 8 cores (1 Cortex-X2, 3 Cortex-A710, and 4 Cortex-A510).
+- Energy Efficiency: The iPhone 15 is highly optimized for efficiency, while the Galaxy S22's efficiency varies by region and chipset variant.
+
+Influence on performance and battery life:
+- Architecture: Both processors are optimized for mobile devices. The Apple A15 Bionic is known for its balance of efficiency and performance.
+- Clock Speed: Higher clock speeds can lead to faster performance but may consume more power.
+- Number of Cores: More cores can handle more tasks simultaneously, improving multitasking. Efficiency cores save battery life during less intensive tasks.
+- Energy Efficiency: A well-optimized processor leads to better battery life, with Apple often having an edge due to tight hardware-software integration.
+
+5. CPU Fetch-Decode-Execute Cycle Flowchart:
+  Basic flow of the fetch-decode-execute cycle:
+- Start
+- Fetch (Fetch instruction from memory)
+- Decode (Interpret the instruction)
+- Execute (Perform the operation)
+- Store (Write back result if needed)
+- Repeat
