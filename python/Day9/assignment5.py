@@ -4,7 +4,7 @@ import MySQLdb
 try:
     mydb = MySQLdb.connect(
         host="localhost",
-        port=3306,
+        port=3306,                          #port not required
         user="root",
         passwd="Harsha@1807#",
         db="rps"
