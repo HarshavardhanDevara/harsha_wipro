@@ -1,7 +1,6 @@
 Q)Four NoSQL databases with their differences, merits, demerits, and use cases:
 
 1)MongoDB (Document Store)
-
 Differences: Stores data in flexible JSON-like documents.
 Merits: Schema-less, high scalability, supports indexing & aggregation.
 Demerits: High memory usage, lacks ACID transactions (until newer versions).
@@ -12,15 +11,15 @@ Differences: Uses a distributed, column-family-based model.
 Merits: Highly available, scalable, fault-tolerant.
 Demerits: Complex queries, higher write latency.
 Use Case: Real-time analytics, IoT applications.
-Redis (Key-Value Store)
 
-3)Differences: Stores data as key-value pairs in-memory.
+3)Redis (Key-Value Store)
+Differences: Stores data as key-value pairs in-memory.
 Merits: Extremely fast, supports caching, pub/sub messaging.
 Demerits: Limited durability (memory-based), not ideal for complex queries.
 Use Case: Caching, real-time leaderboards.
-Neo4j (Graph Database)
 
-4)Differences: Stores data as nodes and relationships.
+4)Neo4j (Graph Database)
+Differences: Stores data as nodes and relationships.
 Merits: Efficient for complex relationships, easy traversal.
 Demerits: Not optimized for high-volume transactions.
 Use Case: Social networks, fraud detection.
