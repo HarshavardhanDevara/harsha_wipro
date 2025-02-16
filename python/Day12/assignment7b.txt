@@ -1,0 +1,129 @@
+ 1)Create the "employees" Collection and CRUD(create,read,update,delete) commands 
+
+=>use harsha
+
+
+=>  db.createCollection("employees")
+
+
+=>  db.employees.insertMany([
+  { 
+    employee_id: 301, 
+    name: "Hari", 
+    age: 32, 
+    department: "Software Engineering", 
+    position: "Backend Developer", 
+    salary: 85000, 
+    hire_date: ISODate("2020-08-10"), 
+    skills: ["Java", "Spring Boot", "MongoDB", "Docker"]
+  },
+  { 
+    employee_id: 302, 
+    name: "Muni", 
+    age: 28, 
+    department: "Data Science", 
+    position: "Data Engineer", 
+    salary: 78000, 
+    hire_date: ISODate("2021-06-15"), 
+    skills: ["Python", "SQL", "Spark", "Airflow"]
+  },
+  { 
+    employee_id: 303, 
+    name: "Bindu", 
+    age: 30, 
+    department: "Human Resources", 
+    position: "HR Manager", 
+    salary: 70000, 
+    hire_date: ISODate("2019-09-20"), 
+    skills: ["Recruitment", "Employee Relations", "Communication"]
+  },
+  { 
+    employee_id: 304, 
+    name: "Manasa", 
+    age: 26, 
+    department: "Cloud Computing", 
+    position: "DevOps Engineer", 
+    salary: 90000, 
+    hire_date: ISODate("2022-02-05"), 
+    skills: ["AWS", "Kubernetes", "Terraform", "CI/CD"]
+  }
+])
+
+=>db.employees.find()
+
+=>db.employees.find({ salary: { $gt: 85000 } })
+o/p=>{
+  _id: ObjectId('67b23b36a1cbb082ea3387a8'),
+  employee_id: 304,
+  name: 'Manasa',
+  age: 26,
+  department: 'Cloud Computing',
+  position: 'DevOps Engineer',
+  salary: 90000,
+  hire_date: 2022-02-05T00:00:00.000Z,
+  skills: [
+    'AWS',
+    'Kubernetes',
+    'Terraform',
+    'CI/CD'
+  ]
+}
+
+])
+
+=>db.employees.findOne({ employee_id: 302 })
+#for particular one 
+
+o/p=>{
+  _id: ObjectId('67b23b36a1cbb082ea3387a6'),
+  employee_id: 302,
+  name: 'Muni',
+  age: 28,
+  department: 'Data Science',
+  position: 'Data Engineer',
+  salary: 78000,
+  hire_date: 2021-06-15T00:00:00.000Z,
+  skills: [
+    'Python',
+    'SQL',
+    'Spark',
+    'Airflow'
+  ]
+}
+
+=>db.employees.findOne()
+#if we give empty first one only fetches
+
+o/p=>{
+  _id: ObjectId('67b23b36a1cbb082ea3387a5'),
+  employee_id: 301,
+  name: 'Hari',
+  age: 32,
+  department: 'Software Engineering',
+  position: 'Backend Developer',
+  salary: 85000,
+  hire_date: 2020-08-10T00:00:00.000Z,
+  skills: [
+    'Java',
+    'Spring Boot',
+    'MongoDB',
+    'Docker'
+  ]
+}
+
+#update data
+=>db.employees.updateOne(
+  { employee_id: 301 },
+  { $set: { salary: 90000 } }
+)
+
+#add data
+=>db.employees.updateOne(
+  { employee_id: 304 },
+  { $push: { skills: "Azure" } }
+)
+
+#del employees of cloudcompute
+=>db.employees.deleteMany({ department: "Cloud Computing" })
+
+=>db.employees.deleteOne({ employee_id: 302 })

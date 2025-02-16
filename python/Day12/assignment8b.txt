@@ -1,0 +1,47 @@
+2)Create the "students" Collection and perform CRUD
+
+db.createCollection("students")
+
+db.students.insertMany([
+  { 
+    student_id: 101, 
+    name: "Rama", 
+    age: 22, 
+    course: "Computer Science"
+  },
+  { 
+    student_id: 102, 
+    name: "Sita", 
+    age: 21, 
+    course: "Electronics"
+  },
+  { 
+    student_id: 103, 
+    name: "Laxman", 
+    age: 23, 
+    course: "Mechanical Engineering"
+  }
+])
+
+
+=> db.students.find()
+
+=> db.students.updateOne(
+  { student_id: 101 },
+  { $set: { course: "Artificial Intelligence" } }
+)
+
+#increase age for all by  1 year
+=> db.students.updateMany(
+  {},
+  { $inc: { age: 1 } }
+)
+
+=> db.students.deleteOne({ student_id: 103 })
+
+#delete all students whose course is electronics
+=>db.students.deleteMany({ course: "Electronics" })
+
+
+
+

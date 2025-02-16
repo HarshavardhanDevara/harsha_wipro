@@ -1,0 +1,4 @@
+{"_id":{"$oid":"67b02b50021ccd6f124d7942"},"title":"Post Title 1","body":"Body of post.","category":"News","likes":1,"tags":["news","events"],"date":"Sat Feb 15 2025 11:21:12 GMT+0530 (India Standard Time)"}
+{"_id":{"$oid":"67b02b8f021ccd6f124d7943"},"title":"Post Title 2","body":"Body of post.","category":"Event","likes":2,"tags":["news","events"],"date":"Sat Feb 15 2025 11:22:15 GMT+0530 (India Standard Time)"}
+{"_id":{"$oid":"67b02b8f021ccd6f124d7944"},"title":"Post Title 3","body":"Body of post.","category":"Technology","likes":3,"tags":["news","events"],"date":"Sat Feb 15 2025 11:22:15 GMT+0530 (India Standard Time)"}
+{"_id":{"$oid":"67b02b8f021ccd6f124d7945"},"title":"Post Title 4","body":"Body of post.","category":"Event","likes":4,"tags":["news","events"],"date":"Sat Feb 15 2025 11:22:15 GMT+0530 (India Standard Time)"}

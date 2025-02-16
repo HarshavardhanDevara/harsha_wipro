@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "67b23b36a1cbb082ea3387a5"
+  },
+  "employee_id": 301,
+  "name": "Hari",
+  "age": 32,
+  "department": "Software Engineering",
+  "position": "Backend Developer",
+  "salary": 99000.00000000001,
+  "hire_date": {
+    "$date": "2020-08-10T00:00:00.000Z"
+  },
+  "skills": [
+    "Java",
+    "Spring Boot",
+    "MongoDB",
+    "Docker"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67b23b36a1cbb082ea3387a7"
+  },
+  "employee_id": 303,
+  "name": "Bindu",
+  "age": 30,
+  "department": "Human Resources",
+  "position": "HR Manager",
+  "salary": 70000,
+  "hire_date": {
+    "$date": "2019-09-20T00:00:00.000Z"
+  },
+  "skills": [
+    "Recruitment",
+    "Employee Relations",
+    "Communication"
+  ]
+}]
