@@ -1,0 +1,10 @@
+pytest -v (tests all files)
+pytest -k <string> -v (searches for files and executes which have specific string)
+pytest -v file_name
+pytest -v file_name --maxfail <num> (stops executing while maxfails reached)
+    example : pytest -v test_classwork5.py --maxfail 2
+pytest  test_square.py -v  --junitxml="result.xml" (stores execution result in a new xml file)
+pip install pytest-xdist
+    pytest -n 3 (runs as 3 workers)
+(By default, pytest runs tests in sequential order. In a real scenario, a test suite will have a number of test files and each file will have a bunch of tests.
+This will lead to a large execution time. To overcome this, pytest provides us with an option to run tests in parallel.)

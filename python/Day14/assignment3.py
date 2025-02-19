@@ -1,18 +1,18 @@
+s1 = sorted("listen")
+s2 = sorted("silent")
+
+if s1 == s2:
+    print("IS ANAGRAM")
+else:
+    print("NOT ANAGRAM")
+
+'''
 from collections import Counter
 
-def is_anagram_sort(str1, str2):
-    return sorted(str1) == sorted(str2)
+s1 = Counter("listen)
+s2 = Counter("silent)
 
-def is_anagram_counter(str1, str2):
-    return Counter(str1) == Counter(str2)
-
-def check_anagram(str1, str2):
-    """Returns a message indicating whether the strings are anagrams"""
-    str1, str2 = str1.replace(" ", "").lower(), str2.replace(" ", "").lower()
-    
-    if is_anagram_sort(str1, str2):
-        return "It is an Anagram (Using Sorting)"
-    if is_anagram_counter(str1, str2):
-        return "It is an Anagram (Using Counter)"
-    
-    return "Not an Anagram"
+if s1 == s2:
+    print("ANAGRAMS)
+else:
+    print("NOT ANAGRAMS)'''

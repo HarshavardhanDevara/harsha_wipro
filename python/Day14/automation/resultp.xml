@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="0.705" timestamp="2025-02-18T14:39:40.675930+05:30" hostname="DESKTOP-TIC5DM4"><testcase classname="test_classwork4" name="test_sqrt" time="0.228" /><testcase classname="test_classwork4" name="testsquare" time="0.002"><failure message="assert (7 * 7) == 40">def testsquare():
+        value = 7
+&gt;       assert 7*7 == 40
+E       assert (7 * 7) == 40
+
+test_classwork4.py:9: AssertionError</failure></testcase></testsuite></testsuites>
