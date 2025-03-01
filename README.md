@@ -37,4 +37,10 @@
 
 
 ### 5)HTML,CSS,Javascript                - Feb27th
+
+
 ### 6)Python and Web                     - Feb28th
+
+
+### 7)Python on Azure                    - Mar1st
+##### Day1 dockproj                      - Marlst
