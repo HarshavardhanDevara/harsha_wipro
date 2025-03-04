@@ -1,0 +1,180 @@
+
+Day 3:
+
+Date : 04-03-2025
+
+Today  Demo
+
+
+1.install oracle virtual box for windows
+
+2.Dounload ubuntu Image and load it in virtual box
+
+3.Docker lab-4
+
+
+
+my-project/
+│── docker-compose.yml
+│── app/
+│   │── Dockerfile
+│   │── app.py
+│   │── requirements.txt
+│   │── database.db
+
+=============================================================
+
+Step 1: Create a Flask Web App
+
+First, we will create a simple Flask web application that connects to an SQLite3 database.
+
+Create app/app.py
+
+from flask import Flask, request, jsonify
+import sqlite3
+
+app = Flask(__name__)
+
+# Function to connect to SQLite3
+def get_db_connection():
+    conn = sqlite3.connect('database.db')
+    conn.row_factory = sqlite3.Row
+    return conn
+
+# Route to test database
+@app.route('/')
+def home():
+    return "Welcome to Flask with SQLite!"
+
+# Route to fetch data from SQLite
+@app.route('/users', methods=['GET'])
+def get_users():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users")
+    users = cursor.fetchall()
+    conn.close()
+    
+    return jsonify([dict(row) for row in users])
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
+
+===================================================================================
+
+Step 2: Create app/requirements.txt
+
+Add the dependencies required for Flask and SQLite:
+
+flask
+
+===================================================================================
+
+Step 3: Create app/Dockerfile
+
+Define a Dockerfile to containerize the Flask app.
+
+
+# Use Python as the base image
+FROM python:3.9
+
+# Set the working directory
+WORKDIR /app
+
+# Copy the application files
+COPY . .
+
+# Install dependencies
+RUN pip install -r requirements.txt
+
+# Expose the application port
+EXPOSE 5000
+
+# Run the application
+CMD ["python", "app.py"]
+
+=============================================================================================
+
+Step 4: Create docker-compose.yml
+
+Now, define the Docker Compose file to run the application.
+
+version: "3.8"
+
+services:
+  web:
+    build: ./app
+    container_name: flask-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./app:/app
+    environment:
+      - FLASK_ENV=development
+    depends_on:
+      - db
+
+  db:
+    image: nouchka/sqlite3:latest
+    container_name: sqlite-db
+    volumes:
+      - db-data:/root/db
+
+volumes:
+  db-data:
+=============================================================================
+
+tep 5: Initialize the SQLite3 Database
+Before running the containers, create a database and a table in database.db.
+
+Create app/database.db
+Run the following Python script to initialize the database:
+
+
+import sqlite3
+
+conn = sqlite3.connect("app/database.db")
+cursor = conn.cursor()
+
+cursor.execute('''CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL
+)''')
+
+cursor.execute("INSERT INTO users (name) VALUES ('Alice'), ('Bob')")
+conn.commit()
+conn.close()
+
+print("Database initialized!")
+===============================================================================
+
+Run this script:
+
+python app/database.db
+
+==============================================================================
+
+Step 6: Run the Containers
+
+Now, start the services using:
+
+docker-compose up -d
+=====================================================================================
+
+Step 7: Test the Website
+
+Open the website at http://localhost:5000
+
+Fetch user data: http://localhost:5000/users
+
+
+=======================================================================================
+
+Step 8: Stop and Remove Containers
+
+docker-compose down
+
+========================================================================================
+
+============================================================================================
+
