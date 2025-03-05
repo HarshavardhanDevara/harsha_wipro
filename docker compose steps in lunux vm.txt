@@ -1,0 +1,28 @@
+Remove the plugin 
+sudo apt-get remove docker-compose-plugin
+install
+sudo apt-get install docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+
+===========================================
+docker-compose up -d
+docker-compose ps
+Access the web application:
+Open your browser and navigate to 
+http://localhost:5000
+You should be able to see your Flask application running.
+To test the /users endpoint, navigate to 
+http://localhost:5000/users 
+in your browser or use a tool like curl to fetch the user data.
+curl http://localhost:5000
+curl http://localhost:5000/users
+Rebuilding the image (if needed): If you make any changes to the Dockerfile or the app, you will need to rebuild the image. You can do so by using:
+docker-compose build
+Or you can combine the build and start actions with:
+docker-compose up --build -d
+to stop containers
+docker-compose down
+
