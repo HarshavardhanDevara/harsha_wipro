@@ -1,0 +1,315 @@
+1. create a directory
+ 
+2. Create Java File  Hello.java
+ 
+3. Create Docker file
+ 
+4. Builder Docker Image
+ 
+5. Run Docker Image
+ 
+ 
+dockproj> mkdir  java-docker-app
+
+dockproj> cd     java-docker-app
+ 
+ 
+Now create a Java file. Save this file as Hello.java file.
+ 
+class Hello{
+
+public static void main(String[] args){
+
+System.out.println("Example of java app \n by using Docker");
+
+} }
+ 
+---------------Dockerfile--------------------------
+ 
+FROM java
+
+COPY Hello.java  . /app
+
+WORKDIR /app
+
+RUN javac Hello.java
+
+CMD ["java", "Hello"]
+ 
+===================================================
+
+docker build -t  java-app  .	
+ 
+docker run   java-app
+===================================================
+from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def home():
+    return "Hello, Docker Compose Web App!"
+ 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+
+
+=========================
+# Use Python base image
+FROM python:3.9
+ 
+# Set the working directory
+WORKDIR /app
+ 
+# Copy dependencies file and install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+ 
+# Copy application code
+COPY . .
+ 
+# Run the app
+CMD ["python", "app.py"]
+======================================
+When using a requirements.txt file in Docker, you typically include it in your Docker image to install dependencies efficiently. Here's a standard approach:
+=================================
+Docker compose Lab-1
+
+What is requirements.txt in Docker Compose?
+
+In Docker Compose, requirements.txt is a text file used to specify  dependencies for an application. 
+It ensures that all required n libraries are installed inside the Docker container when building the image.
+=========================================================================================================
+What is FLASK_ENV=development?
+FLASK_ENV=development is an environment variable used in Flask applications to enable development mode.
+===========================================================================================================
+
+webapp/
+│── docker-compose.yml
+│── Dockerfile
+│── app.py
+│── requirements.txt
+
+docker-compose.yml (Define Services)
+
+This file defines the web app service.
+
+version: "3.8"
+
+services:
+  web:
+    build: .
+    container_name: flask_webapp
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    environment:
+      - FLASK_ENV=development
+
+Dockerfile
+
+# Use Python base image
+FROM python:3.9
+
+# Set the working directory
+WORKDIR /app
+
+# Copy dependencies file and install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY . .
+
+# Run the app
+CMD ["python", "app.py"]
+
+------------------------------
+app.py (Flask Web App)
+
+
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Docker Compose Web App!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+
+-----------------------------------------
+
+requirements.txt (Dependencies)
+
+Defines the Python packages needed.
+
+
+flask
+
+=============================================
+docker-compose up --build
+
+Access the Web App
+Open a browser and go to:
+👉 http://localhost:5000
+============================================
+docker status 
+
+docker-compose down
+
+docker status
+=============================================
+docker volume create my_volume
+
+Creating a Volume:
+ 
+You can manually create a volume before using it.
+ 
+Lab 1: docker volume create my_volume  [ my_volume is name of the volume [
+ 
+Verify the created volume [ to verify it is created ]
+ 
+docker volume ls
+ 
+To inspect volume
+ 
+docker inspect my_volume
+====================================================
+1. What is Docker Compose?
+ 
+Docker Compose is a tool that simplifies the process of defining and running multi-container Docker applications.
+ 
+Instead of manually starting multiple containers and configuring their networking, Docker Compose uses a single YAML file
+ 
+to define all services your application needs, along with their configurations.
+ 
+ 
+In short, Docker Compose allows you to:
+ 
+Define multiple services in a single configuration file.
+ 
+Manage container relationships (e.g., linking a web app to a database).
+ 
+Use a simple command to start all containers at once. [ docker compose up ]
+ 
+ 
+Why Use Docker Compose?
+ 
+Docker Compose is particularly useful when:
+ 
+Your app has multiple services (e.g., a web server, database, and cache).
+ 
+You want to ensure containers communicate seamlessly.
+ 
+You need to manage configurations, such as environment variables or network settings,
+ 
+Why Use Docker Compose?
+ 
+Docker Compose is particularly useful when:
+ 
+Your app has multiple services (e.g., a web server, database, and cache).
+ 
+You want to ensure containers communicate seamlessly.
+ 
+You need to manage configurations, such as environment variables or network settings,
+ 
+Key Concepts in Docker Compose
+ 
+Before diving into examples, let’s get familiar with some key terms:
+ 
+Service: Each container running as part of your application (e.g., web server, database).
+ 
+YAML File: A simple configuration file (docker-compose.yml) where you define your services, networks, and volumes.
+ 
+Volumes: Persist data generated by and used by Docker containers.
+ 
+Networks: Allow containers to communicate with each other.
+ 
+ =====================================================
+Task :
+ 
+create folder compose-lab-2
+ 
+navigate to compose-lab-2
+ 
+1. app.py  [ creating dictionary  ]
+ 
+2. list only keys
+ 
+3. list only values
+ 
+4. list both key and values in the format K--->v
+ 
+ 
+Dockerfile
+ 
+To build image. docker buid  -t  docimage-2
+ 
+run the image
+ 
+docker run --name container2  docimage-2
+ 
+----------------------------------------------------
+ 
+Goto docker desktop :
+ 
+make sure it is created  
+ 
+ 
+use docker cli to list images and make sure docimage-2
+ 
+remove the image docimage-2
+ 
+----------------------------------------------------------
+Docker Push Repository
+======================
+ 
+login to hub.docker.com
+ 
+We need to login to our account of Docker hub. If you don't have, create it first.
+ 
+$ docker login
+ 
+ 
+it will ask for username. Enter the dockerid here and press enter.
+ 
+Tag Docker Image
+ 
+After login, we need to tag our docker image that we want to push. Following command is used to tag the docker image.
+ 
+ 
+$ docker tag image-name username/image-name
+ 
+ 
+The following command is used to push docker image to docker hub repository.
+ 
+$ docker push  username/image-name
+#steps username must be small its casesensitive
+docker login
+docker tag mythirdapp hdevarak/mythirdapp
+docker push  hdevarak/mythirdapp
+======================================================
+
+Life Cycle of Docker :
+                build        run
+1. Dockerfile ------->Image-------->Container
+2. command ------------------->DockerEngine
+ 
+ 
+Docker is a contarinzed Platform .
+ 
+To create docker , we need to create docker file
+ 
+Docker is light weight in nature[ Takes mb size not in gb ]
+
+
+docker compose up
+docker compose down
+docker ps -a
+docker ps
+docker rm 508555201efc
+ docker images 
+docker rmi docimage
+docker compose up -d
+============================

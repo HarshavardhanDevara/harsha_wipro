@@ -1,11 +1,10 @@
-# Use the official Nginx image
 FROM nginx:latest
-
-# Remove the default Nginx web page and copy our HTML file
-COPY index.html /usr/share/nginx/html/index.html
-
-# Expose port 80
+RUN rm -rf /usr/share/nginx/html/*
+# COPY index.html /usr/share/nginx/html/
+COPY Index.html /usr/share/nginx/html/index.html
+COPY lib/bootstrap/dist/css/ /usr/share/nginx/html/lib/bootstrap/dist/css/
+COPY lib/bootstrap/dist/js/ /usr/share/nginx/html/lib/bootstrap/dist/js/
+COPY images/ /usr/share/nginx/html/images/
 EXPOSE 80
-
-# Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
+

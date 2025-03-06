@@ -1,0 +1,240 @@
+docker windows install
+restart pc
+in win search turn windows features on or off
+in that give access 
+windows subsystem for Linux
+restart pc 
+if you have issues with wsl or wsl2 installation
+Install Docker Desktop and choose Hyper-V instead of WSL2 during installation.
+uncheck the option recommended wsl2 instead hyperv 
+then docker works fine
+=====================================================
+error connection while connect docker steps to follow
+Open PowerShell (Admin mode)
+wsl --shutdown
+net stop com.docker.service
+net start com.docker.service
+wsl
+
+docker info
+======================================================
+error connection
+
+Press Win + X → Click Windows PowerShell (Admin)
+Run:
+powershell
+Copy
+Edit
+Get-Service com.docker.service
+If the service is Stopped, start it:
+
+powershell
+Copy
+Edit
+Start-Service com.docker.service
+Then, check if Docker is working:
+
+powershell
+Copy
+Edit
+docker info
+===========================================
+do this in the new dir where you created
+docker pull python
+if it runs get download then complete 
+docker run -it python
+to check python working in docker or not
+==============================================
+in dockproj folder
+create python_image folder
+
+in that create file app.py
+print("welcome to first day of docker class")
+create file name-> Dockerfile 
+
+FROM   python
+WORKDIR /app
+COPY  . /app
+CMD ["python3", "app.py"]
+ 
+run below command on exact path of python_image
+docker  build   -t   myfirstapp  . #. must
+then
+docker run myfirstapp
+====================================================================
+#docker hub settings for account
+#recovery code for docker
+1PQETQBCW03SB
+
+#Authenticate with QR or text code
+JA6FPFG72SIERHOI3RZWJ5VB7YQYO4LA
+================================================================================
+docker pull mysql:latest
+throws error 401 autentication
+docker account mail must be verify then everything works fine
+docker pull mysql:latest
+docker run --name test-mysql -e MYSQL_ROOT_PASSWORD=Abc12345  -d mysql
+docker exec -it test-mysql bash 
+bash-5.1# mysql -u root -p
+Enter password: Abc12345
+enters mysql
+sql>show databases;
+to see databases 
+=================================================
+docker images
+docker ps
+docker ps -a
+=====================================================
+Write a python script say docpysc1.py
+ 
+1. sum of numbers in the list
+2. max value from the list
+3. min value from the list
+4. no of elements in the list
+ 
+----------------------------------------------------------------------------------------------
+ numbers = [10, 20, 30, 40, 50]
+
+print("Sum of numbers in the list:", sum(numbers))
+print("Max value from the list:", max(numbers))
+print("Min value from the list:", min(numbers))
+print("Number of elements in the list:", len(numbers))
+
+
+-----------------------
+#Docker file
+ 
+FROM   python
+WORKDIR /app
+#COPY  docpysc1.py ./app 
+COPY docpysc1.py .
+CMD ["python3", "docpysc1.py"]
+ 
+===============================================================================================
+ 
+docker build -t mysecondapp   .
+ 
+docker run mysecondapp  [ docker creates container , container name give ny docker ]
+ 
+or
+ 
+docker run --name firstpyc  mysecondapp
+ 
+==================================================================================================
+
+stop the container
+docker stop   containername or container id
+we can check running containers by 
+docker ps there id or name available stop by command
+docker stop idorname
+================================================================
+Assignment-2
+ 
+ 
+pyflask.py
+ 
+Step 1: Create a Flask Application
+ 
+from flask import Flask
+ 
+app = Flask(__name__)
+ 
+@app.route("/")
+def home():
+    return "Hello, Flask in Docker!"
+ 
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+ 
+===================================================================
+ 
+Dockerfile
+ 
+# Use the official Python image
+ 
+FROM python
+ 
+# Set working directory in container
+WORKDIR /app
+ 
+# Copy application files  
+ 
+COPY  pyflask.py   . /app
+ 
+# Install Flask
+RUN pip install flask
+ 
+# Expose Flask port
+EXPOSE 5000
+ 
+# Run the application
+CMD ["python", "app.py"]
+ 
+=========================================================================
+ 
+docker build -t flask-app  .
+ 
+ 
+docker run -d -p 5000:5000 flask-app
+ 
+ 
+==================================================================================
+ 
+ 
+Step 5: Access the Flask App
+ 
+Open your browser and go to:
+ 
+👉 http://localhost:5000/
+ 
+You should see:
+ 
+"Hello, Flask in Docker!"
+
+=============================
+# Use the official Python image
+FROM python
+
+# Set working directory in container
+WORKDIR /app
+
+# Copy application files  
+COPY pyflask.py .
+
+# Install Flask
+RUN pip install flask
+
+# Expose Flask port
+EXPOSE 5000
+
+# Run the application
+CMD ["python", "pyflask.py"]
+=========================================
+rom flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello, Flask in Docker!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+================================================
+docker build -t flask-app  .
+docker run -d -p 5000:5000 flask-app
+Open your browser and go to:
+http://localhost:5000/
+to stop container with id or name
+docker ps #check containers
+docker stop 2184f55cb051
+docker stop boring_benz
+docker rm e7218d80c9f7
+to remove container
+#to create containers
+
+docker compose up
+docker compose down
+docker ps
+docker ps -a
+==============================================================

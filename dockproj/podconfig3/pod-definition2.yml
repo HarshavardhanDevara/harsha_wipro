@@ -1,0 +1,19 @@
+# Create a Kubernetes Pod definition file using values below:
+# Name: postgres 
+# Labels: tier => db-tier
+# Container name: postgres
+# Image: postgress
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgres
+  labels:
+    app: db-tier
+spec: 
+  containers: 
+    - name: postgres
+      image: postgres
+      env: 
+        - name: POSTGRES_PASSWORD
+          value: mysecretpassword
