@@ -81,3 +81,110 @@ pipeline {
         }
     }
 }
+
+
+
+
+
+ping 127.0.0.1 -n 11 > nul
+echo This project is deployment
+
+
+echo 'Welcome to Git Clone Sample'
+git clone https://github.com/NatarajanMurugadoss/deloitte.git
+dir
+cd deloitte
+dir
+
+C:\Program Files\Git\bin\git.exe
+
+pipeline {
+    agent any
+    stages {
+        stage('Print Env Variables') {
+            steps {
+                script {
+                    echo "Build Id : ${env.BUILD_ID}"
+                    echo "WORK SPACE NAME  : ${env.WORKSPACE}"
+                    
+                }
+            }
+        }
+    }
+}
+
+
+pipeline {
+    agent any
+    environment{
+        fname = "Doss"
+    }
+    stages {
+        stage('one') {
+            steps{
+                script{
+                    if (env.fname == 'Doss') {
+                        echo 'Good Morning  Doss'
+                    }
+                    else{
+                        echo 'I do not know you!'
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+pipeline {
+environment {
+
+        MY_NAME = "Doss"
+    }
+
+    agent  any 
+
+    stages {
+        stage('one') {
+            
+            steps {
+                echo "My name in stage  one  ${MY_NAME}"
+            }
+        }
+        stage('two') {
+            steps {
+               echo " My name in stage  two  ${MY_NAME}"
+            }
+        }
+    }
+}
+
+pipeline {
+    environment {
+        MY_NAME = "Murugadoss"
+    }
+    agent any
+    stages {
+        stage('Print Variable') {
+            steps {
+                echo "My Name is  ${MY_NAME}"
+            }
+        }
+    }
+}
+
+pipeline {
+    environment {
+        MY_VAR = "HelloWorld"
+    }
+    agent any
+    stages {
+        stage('Print Variable') {
+            steps {
+                echo "MY_VAR is ${MY_VAR}"
+            }
+        }
+    }
+}
+
