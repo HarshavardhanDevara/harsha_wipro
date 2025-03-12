@@ -1,0 +1,33 @@
+2025-03-12 16:24:14,345 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 16:24:14,346 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-12 16:24:14,348 - INFO -  * Restarting with stat
+2025-03-12 16:24:15,302 - WARNING -  * Debugger is active!
+2025-03-12 16:24:15,309 - INFO -  * Debugger PIN: 112-675-146
+2025-03-12 16:25:02,810 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 16:25:02,810 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-12 16:25:02,812 - INFO -  * Restarting with stat
+2025-03-12 16:25:04,146 - WARNING -  * Debugger is active!
+2025-03-12 16:25:04,160 - INFO -  * Debugger PIN: 112-675-146
+2025-03-12 16:31:10,617 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 16:31:10,618 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-12 16:31:10,621 - INFO -  * Restarting with stat
+2025-03-12 16:31:11,606 - WARNING -  * Debugger is active!
+2025-03-12 16:31:11,620 - INFO -  * Debugger PIN: 112-675-146
+2025-03-12 16:45:21,367 - INFO -  * Detected change in 'c:\\Users\\harsh\\Desktop\\harsha_wipro\\milestone\\app.py', reloading
+2025-03-12 16:45:21,996 - INFO -  * Restarting with stat
+2025-03-12 16:45:23,536 - WARNING -  * Debugger is active!
+2025-03-12 16:45:23,546 - INFO -  * Debugger PIN: 112-675-146
+2025-03-12 16:46:01,162 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-12 16:46:01,163 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-12 16:46:01,168 - INFO -  * Restarting with stat
+2025-03-12 16:46:01,918 - WARNING -  * Debugger is active!
+2025-03-12 16:46:01,924 - INFO -  * Debugger PIN: 112-675-146
+2025-03-12 16:48:31,686 - INFO - 127.0.0.1 - - [12/Mar/2025 16:48:31] "[31m[1mPOST /register HTTP/1.1[0m" 415 -
+2025-03-12 16:48:55,048 - INFO - 127.0.0.1 - - [12/Mar/2025 16:48:55] "[35m[1mPOST /register HTTP/1.1[0m" 201 -
+2025-03-12 16:49:29,033 - INFO - Successful authentication for user: harsha_d
+2025-03-12 16:49:29,038 - INFO - 127.0.0.1 - - [12/Mar/2025 16:49:29] "POST /login HTTP/1.1" 200 -
+2025-03-12 16:50:49,426 - INFO - 127.0.0.1 - - [12/Mar/2025 16:50:49] "[31m[1mGET /user-dashboard HTTP/1.1[0m" 422 -
