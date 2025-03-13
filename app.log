@@ -1,0 +1,38 @@
+INFO:apscheduler.scheduler:Scheduler started
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Scheduler started
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-675-146
+INFO:apscheduler.scheduler:Scheduler started
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+INFO:apscheduler.scheduler:Scheduler started
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 112-675-146
+INFO:apscheduler.scheduler:Scheduler started
+INFO:apscheduler.scheduler:Scheduler started
+INFO:apscheduler.scheduler:Scheduler started
+2025-03-13 12:07:56,067 - INFO - Doctor Appointment API started
+2025-03-13 12:07:56,123 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-13 12:07:56,123 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-13 12:07:56,129 - INFO -  * Restarting with stat
+2025-03-13 12:07:57,293 - INFO - Doctor Appointment API started
+2025-03-13 12:07:57,334 - WARNING -  * Debugger is active!
+2025-03-13 12:07:57,338 - INFO -  * Debugger PIN: 112-675-146
+2025-03-13 12:09:35,018 - INFO - Flask app started successfully!
+2025-03-13 12:09:35,085 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-13 12:09:35,085 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-13 12:09:35,090 - INFO -  * Restarting with stat
+2025-03-13 12:09:36,158 - INFO - Flask app started successfully!
+2025-03-13 12:09:36,192 - WARNING -  * Debugger is active!
+2025-03-13 12:09:36,195 - INFO -  * Debugger PIN: 112-675-146
+2025-03-13 12:11:26,467 - INFO -  * Detected change in 'c:\\Users\\harsh\\Desktop\\harsha_wipro\\final\\app.py', reloading
+2025-03-13 12:11:26,693 - INFO -  * Restarting with stat
+2025-03-13 12:12:14,528 - INFO -  * Restarting with stat
