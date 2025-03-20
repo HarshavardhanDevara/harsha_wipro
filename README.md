@@ -230,7 +230,7 @@ _End of Screenshots Section_
 ## Screenshots
 
 ### Dashboard
-![Dashboard](images/Screenshot_83.png)
+![Dashboard](harsha_wipro/images/Screenshot_83.png)
 
 ### Customer Management
 ![Customer Management](images/customer_management.png)
