@@ -225,3 +225,18 @@ To connect the application to a MySQL database:
 !
 
 _End of Screenshots Section_
+
+
+## Screenshots
+
+### Dashboard
+![Dashboard](images/Screenshot_83.png)
+
+### Customer Management
+![Customer Management](images/customer_management.png)
+
+### Interaction Tracking
+![Interaction Tracking](images/interaction_tracking.png)
+
+### Review System
+![Review System](images/review_system.png)
