@@ -1,0 +1,95 @@
+/* Add hover effect for buttons */
+.btn {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Add fade-in animation for tables */
+table {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    background: linear-gradient(135deg, #1f65ab, #1f4367); /* Light gradient */
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  .container {
+    margin-top: 30px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h3 {
+    color: #007bff;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  input.form-control {
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  button.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+  
+  a.btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+  }
+
+  /* Sidebar Styling */
+.sidebar {
+    background: linear-gradient(45deg, #343a40, #6c757d); /* Dark gray to light gray gradient */
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .sidebar a {
+    color: white;
+    font-weight: bold;
+  }
+  
+  .sidebar a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Light hover effect */
+    color: #fff;
+  }
+
+  .rating .fa-star {
+    color: #ccc; /* Default color for unselected stars */
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.rating .fa-star.selected {
+    color: #ffc107; /* Highlight color for selected stars (yellow) */
+}
+
+

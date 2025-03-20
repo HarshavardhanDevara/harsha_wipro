@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Edit Customer</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script>
+      // Add JavaScript to handle star selection
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.rating .fa-star').forEach(star => {
+          star.addEventListener('click', function () {
+              const rating = this.getAttribute('data-value');
+              document.getElementById('rating').value = rating;
+      
+              // Highlight selected stars and reset others
+              document.querySelectorAll('.rating .fa-star').forEach(s => {
+                  if (s.getAttribute('data-value') <= rating) {
+                      s.classList.add('selected'); // Highlight stars up to the selected one
+                  } else {
+                      s.classList.remove('selected'); // Reset stars after the selected one
+                  }
+              });
+          });
+      });
+      });
+    </script>
+  </head>
+  <body>
+    {% extends "base.html" %}
+
+    {% block title %}Reviews{% endblock %}
+    
+    {% block content %}
+    <div class="container" style="margin-top: 30px;">
+      <h3>Edit Customer</h3>
+      <form action="/customer-edit-function/{{ customer.id }}" method="post">
+        <div class="form-group">
+          <label for="inputFirstName">First Name</label>
+          <input type="text" class="form-control" name="first_name" id="inputFirstName" value="{{ customer.first_name }}" required>
+        </div>
+        <div class="form-group">
+          <label for="inputLastName">Last Name</label>
+          <input type="text" class="form-control" name="last_name" id="inputLastName" value="{{ customer.last_name }}" required>
+        </div>
+        <div class="form-group">
+          <label for="inputCompany">Company</label>
+          <input type="text" class="form-control" name="company" id="inputCompany" value="{{ customer.company }}" required>
+        </div>
+        <div class="form-group">
+          <label for="inputPhone">Phone</label>
+          <input type="text" class="form-control" name="phone" id="inputPhone" value="{{ customer.phone }}" required>
+        </div>
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input type="email" class="form-control" name="email" id="inputEmail" value="{{ customer.email }}" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+        <a href="/" class="btn btn-secondary">Cancel</a>
+      </form>
+      <br>
+      <br> 
+      <!-- Add Review Form -->
+      <h4>Add Review</h4>
+      <form action="/review-add/{{ customer.id }}" method="POST">
+        <label for="rating">Rating:</label>
+        <div class="rating">
+            <i class="fa fa-star" data-value="1"></i>
+            <i class="fa fa-star" data-value="2"></i>
+            <i class="fa fa-star" data-value="3"></i>
+            <i class="fa fa-star" data-value="4"></i>
+            <i class="fa fa-star" data-value="5"></i>
+        </div>
+        <input type="hidden" name="rating" id="rating" required>
+          <label for="comment">Comment:</label>
+          <textarea name="comment" id="comment" rows="3"></textarea>
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <br>
+      <br>
+      <!-- Display Reviews Section -->
+      <h4>Customer Reviews</h4>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Rating</th>
+            <th scope="col">Comment</th>
+            <th scope="col">Timestamp</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% if reviews %}
+            {% for review in reviews %}
+            <tr>
+              <td>{{ review.rating }}</td>
+              <td>{{ review.comment }}</td>
+              <td>
+                {% if review.timestamp %}
+                  {{ review.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
+                {% else %}
+                  No timestamp
+                {% endif %}
+              </td>
+            </tr>
+            {% endfor %}
+          {% else %}
+            <tr>
+              <td colspan="3">No reviews available.</td>
+            </tr>
+          {% endif %}
+        </tbody>
+      </table>
+    </div>
+    {% endblock %}
+  </body>
+</html>

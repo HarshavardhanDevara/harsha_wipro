@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  </head>
+  <body>
+    {% extends "base.html" %}
+
+    {% block title %}Dashboard{% endblock %}
+    
+    {% block content %}
+    <!-- Dashboard Content -->
+    <div class="container" style="margin-top: 30px;">
+      <h3>Dashboard</h3>
+      <div class="metrics">
+        <p>Total Customers: {{ customer_count }}</p>
+        <p>Total Interactions: {{ interaction_count }}</p>
+        <p>Total Reviews: {{ review_count }}</p>
+        <p>Latest Review Timestamp: {{ latest_review_timestamp }}</p>
+      </div>
+      <a href="/" class="btn btn-primary">Manage Customers</a>
+      <a href="/interaction-data" class="btn btn-secondary">Manage Interactions</a>
+      <h4>Monthly Interactions</h4>
+      <canvas id="interactionChart" width="400" height="200"></canvas>
+      <script>
+        const monthlyInteractions = JSON.parse('{{ monthly_interactions | tojson | safe }}');
+        console.log(monthlyInteractions);
+        const ctx = document.getElementById('interactionChart').getContext('2d');
+        const interactionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: Object.keys(monthlyInteractions),
+                datasets: [{
+                    label: '# of Interactions',
+                    data: Object.values(monthlyInteractions),
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+      </script>
+    </div>
+    {% endblock %}
+  </body>
+</html>

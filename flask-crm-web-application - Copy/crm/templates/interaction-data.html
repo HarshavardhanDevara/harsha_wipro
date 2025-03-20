@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Interactions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </head>
+  <body>
+    {% extends "base.html" %}
+
+    {% block title %}Reviews{% endblock %}
+    
+    {% block content %}
+    <div class="container" style="margin-top: 30px;">
+      <h3>List of Interactions</h3>
+      <div class="float-right">
+        <a href="/interaction-add" class="btn btn-primary">Add New Interaction</a> <!-- Add Interaction Button -->
+        <a href="/" class="btn btn-secondary">View Customers</a>
+      </div>
+      <br><br>
+      <input type="text" id="interaction-search-bar" class="form-control mb-3" placeholder="Search interactions..." onkeyup="searchInteractions()">
+      <table class="table" id="interaction-table">
+        <thead>
+          <tr>
+            <th scope="col">Customer ID</th>
+            <th scope="col">Date</th>
+            <th scope="col">Description</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for interaction in interactions %}
+          <tr>
+            <td>{{ interaction.customer_id }}</td>
+            <td>{{ interaction.date }}</td>
+            <td>{{ interaction.description }}</td>
+            <td>
+              <a href="/interaction-edit/{{ interaction.id }}" class="btn btn-warning btn-sm">Edit</a>
+              <form action="/interaction-delete/{{ interaction.id }}" method="post" style="display:inline;">
+                  <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% endblock %}
+  </body>
+</html>
