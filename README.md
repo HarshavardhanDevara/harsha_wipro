@@ -215,16 +215,18 @@ To connect the application to a MySQL database:
 ## Screenshots
 
 ### Dashboard
-![Dashboard](images/Screenshot%20(89).png)
+![Dashboard](images/Screenshot%20(91).png)
+![Dashboard](images/Screenshot%20(92).png)
 
 ### Customer Management
 ![Customer Management](images/Screenshot%20(83).png)
 ![Customer Management](images/Screenshot%20(84).png)
-![Customer Management](images/Screenshot%20(85).png)
-![CM](images/Screenshot%20(86).png)
+![Customer Management](images/Screenshot%20(86).png)
+![CM](images/Screenshot%20(85).png)
 
 ### Interaction Tracking
-![Interaction Tracking](images/interaction_tracking.png)
+![Interaction Tracking](images/Screenshot%20(87).png)
+![Interaction Tracking](images/Screenshot%20(88).png)
 
 ### Review System
-![Review System](images/review_system.png)
+![Review System](images/Screenshot%20(89).png)
