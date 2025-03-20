@@ -1,4 +1,5 @@
-# Flask CRM Web Application
+# Capstone Project Customer Relationship Management (CRM) System
+## Flask CRM Web Application
 
 A feature-rich CRM (Customer Relationship Management) web application built using Flask. This application allows users to manage customers, interactions, and reviews efficiently.
 
@@ -215,8 +216,8 @@ To connect the application to a MySQL database:
 ## Screenshots
 
 ### Dashboard
-![Dashboard](images/Screenshot%20(91).png)
 ![Dashboard](images/Screenshot%20(92).png)
+![Dashboard](images/Screenshot%20(91).png)
 
 ### Customer Management
 ![Customer Management](images/Screenshot%20(83).png)
@@ -227,6 +228,7 @@ To connect the application to a MySQL database:
 ### Interaction Tracking
 ![Interaction Tracking](images/Screenshot%20(87).png)
 ![Interaction Tracking](images/Screenshot%20(88).png)
+![Interaction Tracking](images/Screenshot%20(92).png)
 
 ### Review System
 ![Review System](images/Screenshot%20(89).png)
