@@ -211,21 +211,6 @@ To connect the application to a MySQL database:
    flask db upgrade
    ```
 
-## Screenshots
-### Dashboard
-![Dashboard](images/Screenshot (83).png)
-
-### Customer Management
-!(flask-crm-web-application - Copy/images/Screenshot%20 (87).png)
-
-### Interaction Tracking
-!
-
-### Review System
-!
-
-_End of Screenshots Section_
-
 
 ## Screenshots
 
@@ -233,7 +218,7 @@ _End of Screenshots Section_
 ![Dashboard](images/Screenshot%20(89).png)
 
 ### Customer Management
-![Customer Management](images/Screenshot (84).png)
+![Customer Management](images/Screenshot%20(83).png, images/Screenshot%20(84).png)
 
 ### Interaction Tracking
 ![Interaction Tracking](images/interaction_tracking.png)
