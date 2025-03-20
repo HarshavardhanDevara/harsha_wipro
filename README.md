@@ -75,7 +75,7 @@ For Ubuntu 18.04:
 - Set up the project structure and database:
   ```bash
   mkdir crm && cd crm
-  sqlite3 crm_database
+
   ```
 
 - Create the main application file:
@@ -216,7 +216,7 @@ To connect the application to a MySQL database:
 ![Dashboard](images/Screenshot (83).png)
 
 ### Customer Management
-!
+!(flask-crm-web-application - Copy/images/Screenshot%20 (87).png)
 
 ### Interaction Tracking
 !
