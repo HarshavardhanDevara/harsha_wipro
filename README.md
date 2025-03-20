@@ -220,8 +220,8 @@ To connect the application to a MySQL database:
 ### Customer Management
 ![Customer Management](images/Screenshot%20(83).png)
 ![Customer Management](images/Screenshot%20(84).png)
-!(images/Screenshot%20(85).png)
-!(images/Screenshot%20(86).png)
+![Customer Management](images/Screenshot%20(85).png)
+![CM](images/Screenshot%20(86).png)
 
 ### Interaction Tracking
 ![Interaction Tracking](images/interaction_tracking.png)
