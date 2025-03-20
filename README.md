@@ -213,7 +213,7 @@ To connect the application to a MySQL database:
 
 ## Screenshots
 ### Dashboard
-![Dashboard](C:/Users/harsh/Desktop/harsha_wipro/flask-crm-web-application - Copy/images/Screenshot (83).png)
+![Dashboard](images/Screenshot (83).png)
 
 ### Customer Management
 !
