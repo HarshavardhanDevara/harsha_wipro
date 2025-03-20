@@ -213,18 +213,15 @@ To connect the application to a MySQL database:
 
 ## Screenshots
 ### Dashboard
-![Dashboard](C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (92).png)
-C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (91).png
+![Dashboard](C:\Users\harsh\Desktop\harsha_wipro\flask-crm-web-application - Copy\images\Screenshot (83).png)
 
 ### Customer Management
-![Customer Management Screenshot](C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (83).png, C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (84).png, C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (85).png, C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (86).png)
+!
 
 ### Interaction Tracking
-![Interaction Tracking](C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (87).pngg)
-(C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (88).png)
+!
 
 ### Review System
-![Review System Screenshot](C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (85).png)
-C:\Users\harsh\Desktop\flask-crm-web-application - Copy\images\Screenshot (89).png
+!
 
 _End of Screenshots Section_
