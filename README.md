@@ -230,10 +230,10 @@ _End of Screenshots Section_
 ## Screenshots
 
 ### Dashboard
-![Dashboard](harsha_wipro/images/Screenshot (83).png)
+![Dashboard](harsha_wipro/images/Screenshot(83).png)
 
 ### Customer Management
-![Customer Management](images/Screenshot(84).png)
+![Customer Management](images\Screenshot (84).png)
 
 ### Interaction Tracking
 ![Interaction Tracking](images/interaction_tracking.png)
