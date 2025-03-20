@@ -230,7 +230,7 @@ _End of Screenshots Section_
 ## Screenshots
 
 ### Dashboard
-![Dashboard](images/Screenshot  (83).png)
+![Dashboard](images/Screenshot%20(89).png)
 
 ### Customer Management
 ![Customer Management](images/Screenshot (84).png)
