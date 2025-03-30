@@ -8,7 +8,6 @@ from collections import defaultdict
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:Harsha%401807%23@localhost/crm_db'
-# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:password@db/crm_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
